@@ -69,13 +69,29 @@ hr.new3{
 .buttonss .btn{
    position: absolute;
   transform: translate(-150%, -200%);
-  color : lightgreen;
+  color : #e6fff2;
+  font-size: 20pt;
 }
 
 .buttonsss .btn{
    position: absolute;
   transform: translate(50%, -200%);
-  color : lightgreen;
+  color : #e6fff2;
+  font-size: 20pt;
+
+}
+
+.button1 {
+	width: 10%;
+	height: 7%;
+	border-color : #e6fff2;
+
+}
+.button1 {
+	width: 10%;
+	height: 7%;
+	border-color : #e6fff2;
+
 }
 
 .aboutus{
