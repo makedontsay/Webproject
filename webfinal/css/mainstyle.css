@@ -39,6 +39,11 @@ animation: AnimationName 46s ease infinite;
   margin-left: 200px; /* Same as the width of the sidenav */
 }
 
+.topic1{
+  float: left;
+  margin-left: 250px;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
