@@ -1,4 +1,17 @@
+<?php
+session_start();
+	if(isset($_SESSION['username'])){
+		$username = $_SESSION['username'];
+	}else{
+		header('Location:login.html');
+		exit;
+	}
 
+	if(isset($_SESSION['img'])){
+		$imgfile = $_SESSION['img'];
+	}
+	
+?>
 
 <!DOCTYPE html>
 <html>
@@ -7,13 +20,13 @@
 		<link rel="stylesheet" type="text/css" href="css/buystyle.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<script type="text/javascript" src="js/feed.js"></script>
 	</head>
 	<body style="min-width: 980px;">
-			<img class="image1" src="image/homebackgrndimg.jpg">
 			
 		<div class="home-welcome">
-			<div class="home-welcome-text">
-				<h1 style="margin: 0px;">Welcome To Jirakun Express</h1>
+			<div class="home-welcome-text" style="background-image: url(image/homebackgrndimg.jpg); height: 500px; ">
+				<h1 style="margin: 0px;">Welcome <span id="username"><?php echo $username ?></span>, To Jirakun Express</h1>
 				<h2>Largest Beans Online Shopping</h2>
 			</div>
 		</div>
@@ -26,8 +39,6 @@
 					<li style="float: left; padding: 25px;">
 						<div class="home-prodlist-img">
 							<img src="./image/product/bean/ถั่วลิสง-มีประโยชน์ต่อส-pobpad.jpg" class="home-prodlist-imgi">
-							<a>Price : </a>
-							<button type="button" class="btn btn-outline-success">Buy</button>
 							</a>
 						</div>
 					</li>
@@ -36,8 +47,6 @@
 					<li style="float: left; padding: 25px;">
 						<div class="home-prodlist-img">
 							<img src="./image/product/bean/walnut-nuts.jpg" class="home-prodlist-imgi">
-							<a>Price : </a>
-							<button type="button" class="btn btn-outline-success">Buy</button>
 							</a>
 						</div>
 					</li>
@@ -45,60 +54,42 @@
 				<ul style="float: left;">
 					<li style="float: left; padding: 25px;">
 						<div class="home-prodlist-img">
-							<img src="./image/product/bean/pecan-nuts.jpg" class="home-prodlist-imgi">
-							<a>Price : </a>
-							<button type="button" class="btn btn-outline-success">Buy</button>
-						</a>
+							<img src="./image/product/bean/pecan-nuts.jpg" class="home-prodlist-imgi"></a>
 						</div>
 					</li>
 				</ul>
 				<ul style="float: left;">
 					<li style="float: left; padding: 25px;">
 						<div class="home-prodlist-img">
-							<img src="./image/product/bean/Almond.jpg" class="home-prodlist-imgi">
-							<a>Price : </a>
-							<button type="button" class="btn btn-outline-success">Buy</button>
-						</a>
+							<img src="./image/product/bean/Almond.jpg" class="home-prodlist-imgi"></a>
 						</div>
 					</li>
 				</ul>
 				<ul style="float: left;">
 					<li style="float: left; padding: 25px;">
 						<div class="home-prodlist-img">
-							<img src="./image/product/bean/brazil-nuts.jpg" class="home-prodlist-imgi">
-							<a>Price : </a>
-							<button type="button" class="btn btn-outline-success">Buy</button>
-						</a>
+							<img src="./image/product/bean/brazil-nuts.jpg" class="home-prodlist-imgi"></a>
 						</div>
 					</li>
 				</ul>
 				<ul style="float: left;">
 					<li style="float: left; padding: 25px;">
 						<div class="home-prodlist-img">
-							<img src="./image/product/bean/cashews-nuts.jpg" class="home-prodlist-imgi">
-							<a>Price : </a>
-							<button type="button" class="btn btn-outline-success">Buy</button>
-						</a>
+							<img src="./image/product/bean/cashews-nuts.jpg" class="home-prodlist-imgi"></a>
 						</div>
 					</li>
 				</ul>
 				<ul style="float: left;">
 					<li style="float: left; padding: 25px;">
 						<div class="home-prodlist-img">
-							<img src="./image/product/bean/macadamia-nuts.jpg" class="home-prodlist-imgi">
-							<a>Price : </a>
-							<button type="button" class="btn btn-outline-success">Buy</button>
-						</a>
+							<img src="./image/product/bean/macadamia-nuts.jpg" class="home-prodlist-imgi"></a>
 						</div>
 					</li>
 				</ul>
 				<ul style="float: left;">
 					<li style="float: left; padding: 25px;">
 						<div class="home-prodlist-img">
-							<img src="./image/product/bean/walnut-nuts.jpg" class="home-prodlist-imgi">
-							<a>Price : </a>
-							<button type="button" class="btn btn-outline-success">Buy</button>
-						</a>
+							<img src="./image/product/bean/walnut-nuts.jpg" class="home-prodlist-imgi"></a>
 						</div>
 					</li>
 				</ul>

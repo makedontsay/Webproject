@@ -7,6 +7,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
 	<link rel="stylesheet" type="text/css" href="css/loginstyle.css">
+	<script type="text/javascript" src="js/loginJS.js"></script>
 	<title>Register</title>
 		
 </head>
@@ -22,17 +23,17 @@
 					</div>
 
 					<div class="col-12 form-input">
-						<form>
+						<form action="js/addDB.php" method="get" accept-charset="utf-8">
 							<div class="form-group">
-								<input type="username" class="form-control" placeholder="Enter Username">
+								<input type="text" name="username" value="" class="form-control" placeholder="Enter Username" required>
 							</div>
 							<div class="form-group">
-								<input type="password" class="form-control" placeholder="Enter Password">
+								<input type="password" name="password" value="" class="form-control" placeholder="Enter Password" required>
 							</div>
 							<div class="form-group">
-								<input type="email" class="form-control" placeholder="Enter Email">
+								<input type="email" name="email" value="" class="form-control" placeholder="Enter Email" required>
 							</div>
-							<button type="submit" class="btn btn-success button1">Register</button>
+							<button type="submit" name="submit" value="Register" class="btn btn-success button1">Register</button>
 						</form>
 					</div>
 

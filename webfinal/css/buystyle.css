@@ -127,12 +127,8 @@ body{
 .srcclear{
 	clear:both;
 }
-.image1{
-  width: 100%;
-}
 .home-welcome {
-
-	margin-top: -500px;
+	margin-top: 0px;
 }
 .home-welcome-text { 
 	 

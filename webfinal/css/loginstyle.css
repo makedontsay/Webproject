@@ -64,3 +64,9 @@ animation: AnimationName 30s ease infinite;
 	font-family: 'roboto';
 	src: url(font/roboto-Thin.ttf);
 }
+
+#errordisplay{
+	/*margin-top: -20px;*/
+	font-size:12px;
+	color: #EE0019;
+}
