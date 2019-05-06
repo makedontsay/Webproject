@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -25,6 +23,8 @@
 					<li style="float: left; padding: 25px;">
 						<div class="home-prodlist-img">
 							<img src="./image/product/bean/ถั่วลิสง-มีประโยชน์ต่อส-pobpad.jpg" class="home-prodlist-imgi">
+							<a>Price : </a>
+							<button type="button" class="btn btn-outline-success">Buy</button>
 							</a>
 						</div>
 					</li>
@@ -33,6 +33,8 @@
 					<li style="float: left; padding: 25px;">
 						<div class="home-prodlist-img">
 							<img src="./image/product/bean/walnut-nuts.jpg" class="home-prodlist-imgi">
+							<a>Price : </a>
+							<button type="button" class="btn btn-outline-success">Buy</button>
 							</a>
 						</div>
 					</li>
@@ -40,42 +42,60 @@
 				<ul style="float: left;">
 					<li style="float: left; padding: 25px;">
 						<div class="home-prodlist-img">
-							<img src="./image/product/bean/pecan-nuts.jpg" class="home-prodlist-imgi"></a>
+							<img src="./image/product/bean/pecan-nuts.jpg" class="home-prodlist-imgi">
+							<a>Price : </a>
+							<button type="button" class="btn btn-outline-success">Buy</button>
+						</a>
 						</div>
 					</li>
 				</ul>
 				<ul style="float: left;">
 					<li style="float: left; padding: 25px;">
 						<div class="home-prodlist-img">
-							<img src="./image/product/bean/Almond.jpg" class="home-prodlist-imgi"></a>
+							<img src="./image/product/bean/Almond.jpg" class="home-prodlist-imgi">
+							<a>Price : </a>
+							<button type="button" class="btn btn-outline-success">Buy</button>
+						</a>
 						</div>
 					</li>
 				</ul>
 				<ul style="float: left;">
 					<li style="float: left; padding: 25px;">
 						<div class="home-prodlist-img">
-							<img src="./image/product/bean/brazil-nuts.jpg" class="home-prodlist-imgi"></a>
+							<img src="./image/product/bean/brazil-nuts.jpg" class="home-prodlist-imgi">
+							<a>Price : </a>
+							<button type="button" class="btn btn-outline-success">Buy</button>
+						</a>
 						</div>
 					</li>
 				</ul>
 				<ul style="float: left;">
 					<li style="float: left; padding: 25px;">
 						<div class="home-prodlist-img">
-							<img src="./image/product/bean/cashews-nuts.jpg" class="home-prodlist-imgi"></a>
+							<img src="./image/product/bean/cashews-nuts.jpg" class="home-prodlist-imgi">
+							<a>Price : </a>
+							<button type="button" class="btn btn-outline-success">Buy</button>
+						</a>
 						</div>
 					</li>
 				</ul>
 				<ul style="float: left;">
 					<li style="float: left; padding: 25px;">
 						<div class="home-prodlist-img">
-							<img src="./image/product/bean/macadamia-nuts.jpg" class="home-prodlist-imgi"></a>
+							<img src="./image/product/bean/macadamia-nuts.jpg" class="home-prodlist-imgi">
+							<a>Price : </a>
+							<button type="button" class="btn btn-outline-success">Buy</button>
+						</a>
 						</div>
 					</li>
 				</ul>
 				<ul style="float: left;">
 					<li style="float: left; padding: 25px;">
 						<div class="home-prodlist-img">
-							<img src="./image/product/bean/walnut-nuts.jpg" class="home-prodlist-imgi"></a>
+							<img src="./image/product/bean/walnut-nuts.jpg" class="home-prodlist-imgi">
+							<a>Price : </a>
+							<button type="button" class="btn btn-outline-success">Buy</button>
+						</a>
 						</div>
 					</li>
 				</ul>
