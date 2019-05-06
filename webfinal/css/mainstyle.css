@@ -1,3 +1,15 @@
+body{background: linear-gradient(270deg, #b4cd42, #b5da88);
+background-size: 400% 400%;
+
+animation: AnimationName 46s ease infinite;
+}
+
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
 .sidenav {
   height: 100%;
   width: 200px;
@@ -8,6 +20,7 @@
   background-color: #111;
   overflow-x: hidden;
   padding-top: 20px;
+  text-align: left;
 }
 
 .sidenav a {
@@ -35,6 +48,8 @@ ul {
 }
 
 li {
+  font-size: 18pt;
+  color: #ccffcc;
   float: right;
 }
 
@@ -46,11 +61,15 @@ li a {
   text-decoration: none;
 }
 
-li a:hover {
-  background-color: #111;
+.btn{
+  color: #ccffcc;
 }
-
-
+.col-sm-8{
+  margin-top: 30px;
+  margin-left: 300px;
+  margin-right: auto;
+  margin-bottom: auto;
+}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
