@@ -1,9 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-body{
-	font-family: 'Roboto', sans-serif;
-	background: url(img/login.jpg) no-repeat center center fixed;
-	background-size: cover;
+body
+{background: linear-gradient(144deg, #e0ff8b, #ffffff);
+background-size: 1000% 1000%;
+
+animation: AnimationName 30s ease infinite;
+}
+
+@keyframes AnimationName { 
+    0%{background-position:5% 0%}
+    50%{background-position:96% 100%}
+    100%{background-position:5% 0%}
+}
+
+.signinup{
+	font-size: 30pt;
+	text-align: center;
+	color: #e6ffe6;
+	font-family: Roboto;
 }
 
 .main-section{
@@ -35,13 +49,18 @@ body{
 	margin: 5px 0 25px;
 }
 .btn-success{
-	background-color: #1c6288;
+	background-color: #47d147;
 	font-size: 19px;
 	border-radius: 5px;
 	padding: 7px 14px;
 	border: 1px solid #daf1ff;
 }
 .btn-success:hover{
-	background-color: #13445e;
+	background-color: #00cc00;
 	border: 1px solid #daf1ff;
+}
+
+@font-face {
+	font-family: 'roboto';
+	src: url(font/roboto-Thin.ttf);
 }
