@@ -47,7 +47,7 @@ if($conn->query($sql) === TRUE){
 	header("Location:https://localhost/webfinal/login.html");
 } else {
 	echo "Error: " . $sql . "<br>" . $conn->error;
-	header("Location:https://localhost/webfinal/register.html");
+	header("Location:https://localhost/webfinal/register.html?error=1");
 }
 
 
