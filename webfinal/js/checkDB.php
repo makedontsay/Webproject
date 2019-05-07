@@ -38,7 +38,7 @@ if($result->num_rows > 0){
 
 			
 
-			header('Location:../cart.php');
+			header('Location:../transfer.php');
 			exit;
 			}
 			else
