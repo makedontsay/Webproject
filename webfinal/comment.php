@@ -1,3 +1,18 @@
+<?php
+session_start();
+  if(isset($_SESSION['username'])){
+    $username = $_SESSION['username'];
+  }else{
+    header('Location:login.html');
+    exit;
+  }
+
+  if(isset($_SESSION['img'])){
+    $imgfile = $_SESSION['img'];
+  }
+  
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,18 +27,16 @@
 <body>
   <div class="sidenav test">
   <img class="center-block" src="pic\logo.png" width="200" height="200" alt="logoimg">
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <a href="cart.php">Home</a>
+  <a href="transfer.php">Transfer</a>
+  <a href="comment.php">Rate us</a>
 </div>
 
 <ul>
-  <li><button type="button" class="btn btn-outline-info">Log Out</button></li>
-  <li><a class="username">test111</a></li>
-  <li><a>Welcome , </a></li>
+  <li><a href="js/logout.php"> Logout</a></li>
+  <li><a>Welcome , <?php echo $username ?></a></li>
   <li><img src="pic\logo.png" width="50" height="50" alt="profilepic"></li>
-  <li class="topic1"><a>Comments</a></li>
+  <li class="topic1"><a>Rate us</a></li>
 </ul>
 
 	<div class="container">

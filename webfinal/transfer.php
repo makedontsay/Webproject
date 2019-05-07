@@ -27,8 +27,9 @@ session_start();
 <body>
 	<div class="sidenav test">
 	<img class="center-block" src="pic\logo.png" width="200" height="200" alt="logoimg">
-  <a href="cart.php">Main Page</a>
+  <a href="cart.php">Home</a>
   <a href="transfer.php">Transfer</a>
+  <a href="comment.php">Rate us</a>
 </div>
 
 <ul>

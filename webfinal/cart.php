@@ -80,15 +80,16 @@ function pre_r($array){
 	<body>
 		<div class="sidenav test">
 	<img class="center-block" src="pic\logo.png" width="200" height="200" alt="logoimg">
-  <a href="cart.php">Main Page</a>
+  <a href="cart.php">Home</a>
   <a href="transfer.php">Transfer</a>
+  <a href="comment.php">Rate us</a>
 </div>
 
 <ul>
   <li><a href="js/logout.php"> Logout</a></li>
   <li><a>Welcome , <?php echo $username ?></a></li>
   <li><img src="pic\logo.png" width="50" height="50" alt="profilepic"></li>
-  <li class="topic1"><a>market order</a></li>
+  <li class="topic1"><a>Home</a></li>
 </ul>
 		
 		<img class="image1" src="image/homebackgrndimgss.jpg" alt="img">
