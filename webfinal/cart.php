@@ -12,7 +12,7 @@ if(isset($_SESSION['username'])){
 	if(isset($_SESSION['img'])){
 		$imgfile = $_SESSION['img'];
 	}
-//session_destroy();
+
 //check if Add to Cart button has bbeen submitted
 if(filter_input(INPUT_POST,'add_to_cart')){
 	if(isset($_SESSION['shopping_cart'])){
@@ -78,11 +78,7 @@ function pre_r($array){
 
 	</head>
 	<body>
-		<div class="sidenav test">
-	<img class="center-block" src="pic\logo.png" width="200" height="200" alt="logoimg">
-  <a href="cart.php">Main Page</a>
-  <a href="transfer.php">Transfer</a>
-</div>
+		
 
 <ul>
   <li><a href="js/logout.php"> Logout</a></li>
@@ -116,6 +112,8 @@ function pre_r($array){
 								<input type="hidden" name="price" value="<?php  echo $product['price']; ?> "/>
 								<input type="submit" name="add_to_cart" class="btn btn-info"
 										value="Add To Cart" />
+
+
 							</div>
 						</form>
 					</div>
@@ -136,31 +134,128 @@ function pre_r($array){
 			<th width="15%">Total</th>
 			<th width="5%">Action</th>
 		</tr>
+		<?php $i = 0 ?>
+		<?php $j = 1 ?>
 		<?php
 			if(!empty($_SESSION['shopping_cart'])):
 
 				$total = 0;
-
+		
 				foreach ($_SESSION['shopping_cart'] as $key => $product):
 		?>
+	<form action="addDATA.php" method="get" accept-charset="utf-8">
 		<tr>
 			<td><?php echo $product['name']; ?></td>
 			<td><?php echo $product['quantity']; ?></td>
 			<td>$ <?php echo $product['price']; ?></td>
-			<td>$ <?php echo number_format($product['quantity'] *  floatval($product['price']),2); ?></td>
+			<td >$ <?php echo number_format($product['quantity'] *  floatval($product['price']),2); ?></td>
 			<td>
 				<a href="cart.php?action=delete&id=<?php echo $product['id']; ?>">
 					<div class="btn-danger">Remove</div>
 				</a>
 			</td>
 		</tr>
+				<?php  $dataname[$i] = $product['name'];?>
+				<?php  $dataquan[$i] = $product['quantity']; ?>
+
+
+				<?php $i = $i + 1 ?>
 		<?php
 				$total = $total + ($product['quantity'] * floatval($product['price']));
 			endforeach;
 		?>
+			<?php
+			if($i==8):
+			?>	
+				<input type="" name="name" value=
+				"<?php echo $dataname[0]; ?> / Quantity : <?php echo $dataquan[0];?> | <?php echo $dataname[1]; ?> / Quantity : <?php echo $dataquan[1]; ?> | <?php echo $dataname[2]; ?> / Quantity : <?php echo $dataquan[2]; ?> <?php echo $dataname[3]; ?> | / Quantity : <?php echo $dataquan[3]; ?> | <?php echo $dataname[4]; ?> / Quantity : <?php echo $dataquan[4]; ?> | <?php echo $dataname[5]; ?> / Quantity : <?php echo $dataquan[5]; ?> | <?php echo $dataname[6]; ?> / Quantity : <?php echo $dataquan[6]; ?> | <?php echo $dataname[7]; ?> / Quantity : <?php echo $dataquan[7]; ?>" 
+				class="form-control" placeholder="1" required>
+				<?php $j = $j + 1 ?>
+			
+			<?php
+			endif;
+			?>
+			<?php
+			if($i==7):
+			?>	
+				<input type="" name="name" value=
+				"<?php echo $dataname[0]; ?> / Quantity : <?php echo $dataquan[0];?> | <?php echo $dataname[1]; ?> / Quantity : <?php echo $dataquan[1]; ?> | <?php echo $dataname[2]; ?> / Quantity : <?php echo $dataquan[2]; ?> | <?php echo $dataname[3]; ?> / Quantity : <?php echo $dataquan[3]; ?> | <?php echo $dataname[4]; ?> / Quantity : <?php echo $dataquan[4]; ?> | <?php echo $dataname[5]; ?> / Quantity : <?php echo $dataquan[5]; ?> | <?php echo $dataname[6]; ?> / Quantity : <?php echo $dataquan[6]; ?>" 
+				class="form-control" placeholder="1" required>
+				<?php $j = $j + 1 ?>
+			
+			<?php
+			endif;
+			?>
+			<?php
+			if($i==6):
+			?>	
+				<input type="" name="name" value=
+				"<?php echo $dataname[0]; ?> / Quantity : <?php echo $dataquan[0];?> | <?php echo $dataname[1]; ?> / Quantity : <?php echo $dataquan[1]; ?> | <?php echo $dataname[2]; ?> / Quantity : <?php echo $dataquan[2]; ?> | <?php echo $dataname[3]; ?> / Quantity : <?php echo $dataquan[3]; ?> | <?php echo $dataname[4]; ?> / Quantity : <?php echo $dataquan[4]; ?> | <?php echo $dataname[5]; ?> / Quantity : <?php echo $dataquan[5]; ?>" 
+				class="form-control" placeholder="1" required>
+				<?php $j = $j + 1 ?>
+			
+			<?php
+			endif;
+			?>
+			<?php
+			if($i==5):
+			?>	
+				<input type="" name="name" value=
+				"<?php echo $dataname[0]; ?> / Quantity : <?php echo $dataquan[0];?>  | <?php echo $dataname[1]; ?> / Quantity : <?php echo $dataquan[1]; ?>  | <?php echo $dataname[2]; ?> / Quantity : <?php echo $dataquan[2]; ?>  | <?php echo $dataname[3]; ?> / Quantity : <?php echo $dataquan[3]; ?>  | <?php echo $dataname[4]; ?> / Quantity : <?php echo $dataquan[4]; ?>" 
+				class="form-control" placeholder="1" required>
+				<?php $j = $j + 1 ?>
+			
+			<?php
+			endif;
+			?>
+			<?php
+			if($i==4):
+			?>	
+				<input type="" name="name" value=
+				"<?php echo $dataname[0]; ?> / Quantity : <?php echo $dataquan[0];?> | <?php echo $dataname[1]; ?> / Quantity : <?php echo $dataquan[1]; ?> | <?php echo $dataname[2]; ?> / Quantity : <?php echo $dataquan[2]; ?> | <?php echo $dataname[3]; ?> / Quantity : <?php echo $dataquan[3]; ?>" 
+				class="form-control" placeholder="1" required>
+
+			
+			<?php
+			endif;
+			?>
+			<?php
+			if($i==3):
+			?>	
+				<input type="" name="name" value=
+				"<?php echo $dataname[0]; ?> / Quantity : <?php echo $dataquan[0];?> | <?php echo $dataname[1]; ?> / Quantity : <?php echo $dataquan[1]; ?> | <?php echo $dataname[2]; ?> / Quantity : <?php echo $dataquan[2]; ?>" 
+				class="form-control" placeholder="1" required>
+
+			
+			<?php
+			endif;
+			?>
+			<?php
+			if($i==2):
+			?>	
+				<input type="" name="name" value=
+				"<?php echo $dataname[0]; ?> / Quantity : <?php echo $dataquan[0];?> | <?php echo $dataname[1]; ?> / Quantity : <?php echo $dataquan[1]; ?> " 
+				class="form-control" placeholder="1" required>
+
+			
+			<?php
+			endif;
+			?>
+			<?php
+			if($i==1):
+			?>	
+				<input type="" name="name" value=
+				"<?php echo $dataname[0]; ?> / Quantity : <?php echo $dataquan[0];?>" 
+				class="form-control" placeholder="1" required>
+
+			
+			<?php
+			endif;
+			?>
+
 		<tr>
 			<td colspan="3" allign="right">Total</td>
-			<td align="right">$ <?php echo number_format($total,2); ?></td>
+			<td name="total" align="right">$ <?php echo number_format($total,2); ?></td>
 			<td></td>
 		</tr>
 		<tr>
@@ -169,13 +264,13 @@ function pre_r($array){
 					if (isset($_SESSION['shopping_cart'])):
 					if (count($_SESSION['shopping_cart']) > 0):
 				?>
-					<a href="#" class="button">Checkout</a>
+				
+				<button type="submit" name="submit" class="button" >Checkout</button>
+		</form>
 				<?php endif; endif; ?>
 			</td>			
 		</tr>
-		<?php
-		endif;
-		?>
+		<?php endif; ?>
 		</table>
 		</div>
 		</div>
