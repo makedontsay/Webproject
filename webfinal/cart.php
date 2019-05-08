@@ -122,7 +122,7 @@ function pre_r($array){
 				endif;
 			endif;			
 		?>
-		<div style="clear: both"></div>
+		<div class="divstyle11"></div>
 		<br />
 		<div class="table-responsive">
 		<table class="table">

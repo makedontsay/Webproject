@@ -37,9 +37,16 @@ session_start();
   <li><img src="pic\logo.png" width="50" height="50" alt="profilepic"></li>
   <li class="topic1"><a>Transfer</a></li>
 </ul>
-<img class="headerimg" src="pic\bank.png">
+<div class="headerimg">
+<img src="pic\bank.png">
+</div>
+
 <div class="login-form">
-    <form action="/examples/actions/confirmation.php" method="post">       
+    <form action="/examples/actions/confirmation.php" method="post">
+    <label class="my-1 mr-2 ID1">ID: <label class="my-1 mr-2"> <?php echo $username ?></label></label>      
+    <div class="pricetag">
+    <label class="my-1 mr-2 price1">Price : </label><label class="my-1 mr-2 price1">Price</label>
+    </div>     
 <div class="custom-file">
   <input type="file" class="custom-file-input" id="customFile">
   <label class="custom-file-label" for="customFile">Your bill picture</label>
@@ -47,10 +54,6 @@ session_start();
         
   <div class="custom-control custom-checkbox my-1 mr-sm-2">
     <input type="checkbox" class="custom-control-input" id="customControlInline">
-  </div>
-  <div class="form-group">
-    <label class="my-1 mr-2" for="formGroupExampleInput">Order Number</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Order Number">
   </div>
   <button type="submit" class="btn btn-outline-info">Submit</button>
 </div>
