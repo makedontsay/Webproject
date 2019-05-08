@@ -56,7 +56,7 @@ session_start();
                     <h1>Trade Contact information</h1>
                   </div> 
                    <div class="comments-list">
-                       <div class="card mb-3" style="max-width: 540px;">
+                       <div class="card mb-3 divstyle2">
   <div class="row no-gutters">
     <div class="col-md-4">
       <img src= "pic/cart.jpg" class="card-img" alt="...">
