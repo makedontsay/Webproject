@@ -74,6 +74,10 @@ h1{
 	color: #ccffcc;
 }
 
+h1.trademarket{
+  color: black;
+}
+
 .user_name{
     font-size:14px;
     font-weight: bold;
@@ -110,25 +114,30 @@ h1{
   width: 100%;
   text-align: left;
   font-size: 20px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .postmsg{
   border-radius: 20px;
-  width: 50%;
+  width: 100%;
   background-color: #FFFFFF;
   margin-left: 15px;
 
-  height: 100px;
-  text-align: center;
-  line-height: 100px;
-  min-width: 200px;
+  height: 70px;
+  text-align:center;
+  min-width: 700px;
 }
 
 .postuser {
-  height: 100px;
-  width:50%;
+  height: 60px;
+  width:100%;
   text-align: center;
-  line-height: 100px;
-  min-width: 200px;
+  min-width: 400px;
+  color :white;
+  font-size: 16pt;
+}
+
+.comment{
+  font-size: 25pt;
+  color: #ccffcc;
 }

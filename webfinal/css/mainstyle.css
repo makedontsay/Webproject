@@ -40,9 +40,20 @@ animation: AnimationName 30s ease infinite;
   margin-bottom: 20px;
      
 }
-.wow{
+.wow1{
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
     font-size: 20px;
     text-align: center;
+    border: 0px solid #555;
+    background-color: #ffffff;
+    
+}
+
+.wow{
+    font-size: 20px;
+    text-align: left;
     border: 0px solid #555;
     background-color: #ffffff;
     

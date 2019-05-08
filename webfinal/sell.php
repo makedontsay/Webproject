@@ -63,7 +63,7 @@ session_start();
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h1 class="card-title" id="username">TRADE MARKET</h1>
+        <h1 class="card-title trademarket">TRADE MARKET</h1>
         <h5 class="card-title" id="email"><?php echo $email ?></h5>
       </div>
     </div>
@@ -76,7 +76,7 @@ session_start();
                           </div>
 
                           <div class="form-group" id="posting">
-  <label for="comment">Submit new offer:</label>
+  <label for="comment" class="comment">Submit new offer : </label>
   <textarea name="msg" id="comment" value="" rows="5" cols="50" placeholder="" class="form-control"  ></textarea>
 </div>
 <button class="btn btn-outline-info" id="postbutton">Post</button>

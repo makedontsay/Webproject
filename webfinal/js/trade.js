@@ -65,7 +65,7 @@ function showPost(data){
 		var temp1 = document.createElement("div");
 		temp1.className = "postuser";
 		
-		temp1.innerHTML = "Contact: "+data[keys[i]]["user"]+"<hr>";
+		temp1.innerHTML = "Contact: "+data[keys[i]]["user"];
 		temp.appendChild(temp1);
 		
 	}
