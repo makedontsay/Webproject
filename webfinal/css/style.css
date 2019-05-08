@@ -3,33 +3,28 @@ html {
 }
 
 body{
-	background: #f1f1f1;
-	background-size: 400% 400%;	
+	background: linear-gradient(145deg, #ecff56, #ffffff);
+background-size: 400% 400%;
+
+animation: AnimationName 55s ease infinite;
 }
 
-.main{
-	border: 0px solid #555;
-	background-color: #ffffff;
-	border-radius: 5px;
-	padding: 15px;
-	margin-left: 50px;
-	margin-right: 50px;
-	margin-top: 50px;
-	margin-bottom: 50px;
+@keyframes AnimationName { 
+    0%{background-position:4% 0%}
+    50%{background-position:97% 100%}
+    100%{background-position:4% 0%}
 }
-
 
 .headerimg{
 		width: 100%;
 		box-shadow: 0px 1px 30px black;
-
 }
 
 .companyname {
 	width: 100%
 	font:"Courier New";
 	position: absolute;
-  top: 10%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 50pt;
@@ -41,7 +36,7 @@ body{
 	width: 100%
 	font-family:"Courier New";
 	position: absolute;
-  top: 20%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 30pt;
@@ -65,7 +60,7 @@ hr.new2{
 
 hr.new3{
 	width: 50%;
-	border :1px solid black;
+	border :3px solid black;
 	border-radius: 10px;
 
 }
@@ -101,10 +96,9 @@ hr.new3{
 
 .aboutus{
 	font-family: roboto;
-	font-size: 40pt;
+	font-size: 60pt;
 	text-align: center;
-	font-weight: bold;
-
+	font-weight: thin;
 }
 
 .col-sm-6 {
@@ -114,14 +108,13 @@ hr.new3{
 
 .contactss{
 	font-family: roboto;
-	font-size: 20pt;
+	font-size: 40pt;
 	text-align: center;
-	font-weight: bold;
 }
 
 .information{
 	font-family: Roboto;
-	font-size: 15pt;
+	font-size: 25pt;
 	text-align: center;
 }
 

@@ -10,7 +10,16 @@ session_start();
   if(isset($_SESSION['img'])){
     $imgfile = $_SESSION['img'];
   }
-  
+  if(isset($_SESSION['email'])){
+    $email = $_SESSION['email'];
+  }
+  if(isset($_SESSION['phone'])){
+    $phone = $_SESSION['phone'];
+  }
+  if(isset($_SESSION['address'])){
+    $address = $_SESSION['address'];
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -22,19 +31,23 @@ session_start();
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 	<link rel ="stylesheet" href="css/informationstyle.css">
+  <script type="text/javascript" src="js/infoJS.js"></script>
+
 	<title>Information</title>
 </head>
 <body>
 	<div class="sidenav test">
 	<img class="center-block" src="pic\logo.png" width="200" height="200" alt="logoimg">
-  <a href="cart.php">Main Page</a>
-  <a href="transfer.php">Profile</a>
+  <a href="cart.php">Home</a>
+  <a href="information.php">Profile</a>
+  <a href="mainpage.php">Orders</a>
+  <a href="comment.php">Rate us</a>
 </div>
 
 <ul>
   <li><a href="js/logout.php"> Logout</a></li>
   <li><a>Welcome , <?php echo $username ?></a></li>
-  <li><img src="pic\logo.png" width="50" height="50" alt="profilepic"></li>
+  <li><img src= <?php echo "pic/".$imgfile ?> width="50" height="50" alt="propic"></li>
   <li class="topic1"><a>Profile</a></li>
 </ul>
 
@@ -43,26 +56,38 @@ session_start();
         <div class="modal-content">
 
           <div class="col-12 user-img">
-            <img src="css/img/logo.png">
-            <div class="signinup">Change Your Profile</div>
+            <img src=<?php echo "pic/".$imgfile ?>>
+            <div class="signinup">Change your cover photo</div>
           </div>
 
           <div class="col-12 form-input">
-            <form action="js/checkDB.php" method="get" accept-charset="utf-8">
-              <div class="form-group">
-              <div class="custom-file">
-  <input type="file" class="custom-file-input" id="customFile">
-  <label class="custom-file-label" for="customFile">Your New Profile Picture</label>
-</div>
-</div>
-              <div class="form-group">
-                <input type="text" name="username" class="form-control" placeholder="Add Phone Number" required>
+
+          <form action="js/uploadPic.php" method="post" id="formId" enctype="multipart/form-data">
+          <input type="file" id="fileField" name="fileToUpload" value="fileToUpload" placeholder="">
+          <button type="submit" name="submit" value="Upload" class="btn btn-success button1">Upload</button>
+          </form>
+
+          <form action="js/addInfo.php" method="get" accept-charset="utf-8">
+
+              <div class="form-group" id="info1">
+                <h2><?php echo $username ?>'s information:</h2><br>
+                <h4>Phone number : <?php echo $phone ?></h4><br>
+                <h4>Email : <?php echo $email ?></h4><br>
+                <h4>Delivery Address : <?php echo $address ?></h4><br><br>
+
+                <input type="text" name="phone" value="" class="form-control" placeholder="Enter new phone number">
               </div>
+
               <div class="form-group">
-                <input type="password" name="password" class="form-control" placeholder="Add Address" required>
+                <input type="text" name="email" value="" class="form-control" placeholder="Enter new email" required="">
               </div>
-              <span id="errordisplay"></span><br>
-              <input type="submit" name="submit" value="Submit" class="btn btn-success button1"></input>
+
+              <div class="form-group">
+                <input type="text" name="address" value="" class="form-control" placeholder="Enter new delivery address" required="">
+              </div>
+
+              <button type="submit" name="submit" value="Submit" class="btn btn-success button1">Submit</button>
+          </form><br>
           </div>
 
         </div>

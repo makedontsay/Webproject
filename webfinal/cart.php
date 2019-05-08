@@ -1,17 +1,21 @@
 <?php
 session_start();
-$product_ids = array();
+  if(isset($_SESSION['username'])){
+    $username = $_SESSION['username'];
+  }else{
+    header('Location:login.html');
+    exit;
+  }
 
-if(isset($_SESSION['username'])){
-		$username = $_SESSION['username'];
-	}else{
-		header('Location:login.html');
-		exit;
-	}
-
-	if(isset($_SESSION['img'])){
-		$imgfile = $_SESSION['img'];
-	}
+  if(isset($_SESSION['img'])){
+    $imgfile = $_SESSION['img'];
+  }
+  if(isset($_SESSION['email'])){
+    $email = $_SESSION['email'];
+  }
+  if(isset($_SESSION['phone'])){
+    $phone = $_SESSION['phone'];
+  }
 
 //check if Add to Cart button has bbeen submitted
 if(filter_input(INPUT_POST,'add_to_cart')){
@@ -78,12 +82,18 @@ function pre_r($array){
 
 	</head>
 	<body>
-		
+		<div class="sidenav test">
+    <img class="center-block" src="pic\logo.png" width="200" height="200" alt="logoimg">
+  <a href="cart.php">Home</a>
+  <a href="information.php">Profile</a>
+  <a href="mainpage.php">Orders</a>
+  <a href="comment.php">Rate us</a>
+</div>
 
 <ul>
   <li><a href="js/logout.php"> Logout</a></li>
   <li><a>Welcome , <?php echo $username ?></a></li>
-  <li><img src="pic\logo.png" width="50" height="50" alt="profilepic"></li>
+  <li><img src=<?php echo "pic/".$imgfile ?> width="50" height="50" alt="profilepic"></li>
   <li class="topic1"><a>market order</a></li>
 </ul>
 		

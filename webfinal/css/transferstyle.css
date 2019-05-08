@@ -1,9 +1,3 @@
-.headerimg{
-  margin-top: 20px;
-  text-align: center;
-  }
-
-
 body{background: linear-gradient(270deg, #b4cd42, #b5da88);
 background-size: 400% 400%;
 
@@ -92,11 +86,6 @@ li a {
       color: #ccffcc;
     }
 
-    .my-1.mr-2.price1{
-      font-size: 18pt;
-      color: white;
-    }
-
     .form-control, .btn {
         min-height: 38px;
         border-radius: 2px;
@@ -105,10 +94,6 @@ li a {
         font-size: 15px;
         font-weight: thin;
     }
-
-.pricetag{
-  text-align: left;
-}
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}

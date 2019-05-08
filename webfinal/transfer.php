@@ -10,7 +10,16 @@ session_start();
   if(isset($_SESSION['img'])){
     $imgfile = $_SESSION['img'];
   }
-  
+  if(isset($_SESSION['price'])){
+    $price = $_SESSION['price'];
+  }
+  if(isset($_SESSION['order'])){
+    $order = $_SESSION['order'];
+  }
+  if(isset($_SESSION['orderid'])){
+    $orderid = $_SESSION['orderid'];
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -22,40 +31,45 @@ session_start();
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 	<link rel ="stylesheet" href="css/transferstyle.css">
+  <script type="text/javascript" src="js/bilJS.js"></script>
+
 	<title>Transfer</title>
 </head>
 <body>
 	<div class="sidenav test">
 	<img class="center-block" src="pic\logo.png" width="200" height="200" alt="logoimg">
-  <a href="cart.php">Main Page</a>
-  <a href="transfer.php">Transfer</a>
+  <a href="cart.php">Home</a>
+  <a href="information.php">Profile</a>
+  <a href="mainpage.php">Orders</a>
+  <a href="comment.php">Rate us</a>
 </div>
 
 <ul>
   <li><a href="js/logout.php"> Logout</a></li>
   <li><a>Welcome , <?php echo $username ?></a></li>
-  <li><img src="pic\logo.png" width="50" height="50" alt="profilepic"></li>
+  <li><img src= <?php echo "pic/".$imgfile ?> width="50" height="50" alt="propic"></li>
   <li class="topic1"><a>Transfer</a></li>
 </ul>
-<div class="headerimg">
-<img src="pic\bank.png">
-</div>
 
 <div class="login-form">
-    <form action="/examples/actions/confirmation.php" method="post">
-    <label class="my-1 mr-2 ID1">ID: <label class="my-1 mr-2"> <?php echo $username ?></label></label>      
-    <div class="pricetag">
-    <label class="my-1 mr-2 price1">Price : </label><label class="my-1 mr-2 price1">Price</label>
-    </div>     
-<div class="custom-file">
-  <input type="file" class="custom-file-input" id="customFile">
-  <label class="custom-file-label" for="customFile">Your bill picture</label>
-</div>
-        
+    <form action="js/uploadBil.php" method="post" id="formId" enctype="multipart/form-data">       
+
+
   <div class="custom-control custom-checkbox my-1 mr-sm-2">
     <input type="checkbox" class="custom-control-input" id="customControlInline">
   </div>
-  <button type="submit" class="btn btn-outline-info">Submit</button>
+  <div class="form-group">
+    <label class="my-1 mr-2" for="formGroupExampleInput">Order Number: </label>
+    <a><?php echo $orderid ?><a><br>
+    <label class="my-1 mr-2" for="formGroupExampleInput">Order Detail: </label><br>
+    <a><?php echo $order ?><a><br>
+    <label class="my-1 mr-2" for="formGroupExampleInput">Total: </label>
+    <a><?php echo $price ?><a>
+  </div>
+          
+          <input type="file" id="fileField" name="fileToUpload" value="fileToUpload" placeholder="">
+          <button type="submit" name="submit" value="Upload" class="btn btn-success button1">Upload</button>
+          </form>
 </div>
 
 </body>

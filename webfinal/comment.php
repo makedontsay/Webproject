@@ -10,6 +10,12 @@ session_start();
   if(isset($_SESSION['img'])){
     $imgfile = $_SESSION['img'];
   }
+  if(isset($_SESSION['email'])){
+    $email = $_SESSION['email'];
+  }
+  if(isset($_SESSION['phone'])){
+    $phone = $_SESSION['phone'];
+  }
   
 ?>
 
@@ -21,6 +27,8 @@ session_start();
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
+  <script type="text/javascript" src="js/post.js"></script>
+
 	<link rel ="stylesheet" href="css/commentstyle.css">
 	<title>Comment</title>
 </head>
@@ -28,14 +36,15 @@ session_start();
   <div class="sidenav test">
   <img class="center-block" src="pic\logo.png" width="200" height="200" alt="logoimg">
   <a href="cart.php">Home</a>
-  <a href="transfer.php">Transfer</a>
+  <a href="information.php">Profile</a>
+  <a href="mainpage.php">Orders</a>
   <a href="comment.php">Rate us</a>
 </div>
 
 <ul>
   <li><a href="js/logout.php"> Logout</a></li>
   <li><a>Welcome , <?php echo $username ?></a></li>
-  <li><img src="pic\logo.png" width="50" height="50" alt="profilepic"></li>
+  <li><img src= <?php echo "pic/".$imgfile ?> width="50" height="50" alt="propic"></li>
   <li class="topic1"><a>Rate us</a></li>
 </ul>
 
@@ -43,29 +52,33 @@ session_start();
             <div class="row">
                 <div class="col-md-8">
                   <div class="page-header">
-                    <h1> Comments </h1>
+                    <h1>Review us something!</h1>
                   </div> 
                    <div class="comments-list">
-                       <div class="card mb-3 divstyle1">
+                       <div class="card mb-3" style="max-width: 540px;">
   <div class="row no-gutters">
     <div class="col-md-4">
-      <img src="..." class="card-img" alt="...">
+      <img src= <?php echo "pic/".$imgfile ?> class="card-img" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <h1 class="card-title" id="username"><?php echo $username ?></h1>
+        <h5 class="card-title"><?php echo $email ?></h5>
       </div>
     </div>
   </div>
 </div>
                           </div>
-                          <div class="form-group">
+
+                          <div id="feed-container">
+                          
+                          </div>
+
+                          <div class="form-group" id="posting">
   <label for="comment">Comment:</label>
-  <textarea class="form-control" rows="5" id="comment"></textarea>
+  <textarea name="msg" id="comment" value="" rows="5" cols="50" placeholder="" class="form-control"  ></textarea>
 </div>
-<button class="btn btn-outline-info" type="submit">Comment</button>
+<button class="btn btn-outline-info" id="postbutton">Post</button>
                    </div>
                     
                     

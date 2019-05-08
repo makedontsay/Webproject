@@ -24,7 +24,7 @@ if($conn->connect_error){
 $username = $_GET["username"];
 $password = $_GET["password"];
 
-$sql = "SELECT id,username,password FROM $tablename WHERE username='$username'";
+$sql = "SELECT id,username,password,email,imgname,phone,address FROM $tablename WHERE username='$username'";
 $result = $conn->query($sql);
 
 if($result->num_rows > 0){
@@ -36,9 +36,12 @@ if($result->num_rows > 0){
 			if($password == $row["password"] ){
 			echo "login successfully";
 
-			
+			$_SESSION['img'] = $row["imgname"];
+			$_SESSION['phone'] = $row["phone"];
+			$_SESSION['email'] = $row["email"];
+			$_SESSION['address'] = $row["address"];
 
-			header('Location:../transfer.php');
+			header('Location:../cart.php');
 			exit;
 			}
 			else
