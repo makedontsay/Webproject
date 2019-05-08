@@ -42,6 +42,7 @@ $username = $_SESSION["username"];
   <a href="cart.php">Home</a>
   <a href="information.php">Profile</a>
   <a href="mainpage.php">Orders</a>
+  <a href="sell.php">Trade</a>
   <a href="comment.php">Rate us</a>
 </div>
 

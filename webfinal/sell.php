@@ -27,7 +27,7 @@ session_start();
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-  <script type="text/javascript" src="js/post.js"></script>
+  <script type="text/javascript" src="js/trade.js"></script>
 
 	<link rel ="stylesheet" href="css/commentstyle.css">
 	<title>Comment</title>
@@ -53,7 +53,7 @@ session_start();
             <div class="row">
                 <div class="col-md-8">
                   <div class="page-header">
-                    <h1>Review us something!</h1>
+                    <h1>Personal Trade</h1>
                   </div> 
                    <div class="comments-list">
                        <div class="card mb-3" style="max-width: 540px;">
@@ -63,7 +63,7 @@ session_start();
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h1 class="card-title" id="username"><?php echo $username ?></h1>
+        <h1 class="card-title" id="username"><?php echo $email ?></h1>
         <h5 class="card-title"><?php echo $email ?></h5>
       </div>
     </div>
@@ -76,7 +76,7 @@ session_start();
                           </div>
 
                           <div class="form-group" id="posting">
-  <label for="comment">Comment:</label>
+  <label for="comment">Submit new offer:</label>
   <textarea name="msg" id="comment" value="" rows="5" cols="50" placeholder="" class="form-control"  ></textarea>
 </div>
 <button class="btn btn-outline-info" id="postbutton">Post</button>
