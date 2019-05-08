@@ -51,55 +51,39 @@ $username = $_SESSION["username"];
   <li><img src= <?php echo "pic/".$imgfile ?> width="50" height="50" alt="profilepic"></li>
   <li class="topic1"><a>market order</a></li>
 </ul>
+<div class="ok">
 
-<table class="table table-bordered table-dark col-sm-8">
-  <thead>
-    <tr>
-      <th scope="col">ตารางเหี้ย</th>
-      <th scope="col">ใช้ไม่เป็นโว้ย</th>
-      <th scope="col">Order ทั้งหมดจาก DB อยู่ใต้ตาราง</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry the Bird</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td colspan="1">Larry the Birdasdasdasdasdasdasdasdasdasdasdasdasdasd</td>
-      <td colspan="2">yoasdasdadawdqawdadsasdqwda dasfsfdesfage rgdrs</td>
-    </tr>
-  </tbody>
-</table>
+  <img class="imageza" src="pic/profile.png" alt="img"></div>
 
+        <div class="wow">MARKET ORDER</div>
+</div>
 
 <?php
-
-
 $sql="SELECT id,name,buyer FROM $tablename ";
 
 $result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "Order ID: " . $row["id"]. " - Order: " . $row["name"] . "by " . $row["buyer"]. "<br>";
-    }
-} else {
-    echo "0 results";
-}
-$conn->close();
-
 ?>
+<div class="ok2">
+<?php
+if ($result->num_rows > 0):
+    // output data of each row
+    while($row = $result->fetch_assoc()):
+?>
+      
+        <div class="wow"><?php echo "Order ID: " . $row["id"]. " - Order: " . $row["name"] . " ||| BY : " . $row["buyer"]. "<hr>"; ?></div>
+<?php
+endwhile; endif;
+$conn->close();
+?>
+</div>
+</div>
+</div>
+
+
+<table class="table table-bordered table-dark col-sm-8">
+
+</table>
+
 
 
 </body>

@@ -1,7 +1,4 @@
-body{background: linear-gradient(270deg, #b4cd42, #b5da88);
-background-size: 400% 400%;
-
-animation: AnimationName 46s ease infinite;
+body{background: #f1f1f1;
 }
 
 @keyframes AnimationName { 
@@ -9,6 +6,46 @@ animation: AnimationName 46s ease infinite;
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
+
+.imageza2{
+    text-align: center;
+}
+.imageza{
+    height: 150px;
+    border: 1px solid #555;
+  background-color: #FFF666;
+  border-radius: 5px;
+  padding: 15px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.ok{
+     margin-top: 20px;
+     text-align: center;
+
+}
+.ok2{
+
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 15px;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+     
+}
+.wow{
+    font-size: 20px;
+    text-align: center;
+    border: 0px solid #555;
+    background-color: #ffffff;
+    
+}
+
+
 
 .sidenav {
   height: 100%;
