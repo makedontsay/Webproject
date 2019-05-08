@@ -51,20 +51,21 @@ session_start();
   <li class="topic1"><a>Transfer</a></li>
 </ul>
 
+
 <div class="login-form">
     <form action="js/uploadBil.php" method="post" id="formId" enctype="multipart/form-data">       
-
-
   <div class="custom-control custom-checkbox my-1 mr-sm-2">
     <input type="checkbox" class="custom-control-input" id="customControlInline">
   </div>
   <div class="form-group">
+    <img class="imageza" src="pic/profile.png" alt="img" height="350px;">
     <label class="my-1 mr-2" for="formGroupExampleInput">Order Number: </label>
-    <a><?php echo $orderid ?><a><br>
+    <div class="d"><a><?php echo $orderid ?><a><br></div>
     <label class="my-1 mr-2" for="formGroupExampleInput">Order Detail: </label><br>
-    <a><?php echo $order ?><a><br>
+    <div class="d"><a><?php echo $order ?><a><br></div>
     <label class="my-1 mr-2" for="formGroupExampleInput">Total: </label>
-    <a><?php echo $price ?><a>
+    <div class="d"><a><?php echo $price ?><a></div>
+      <label class="my-1 mr-2" for="formGroupExampleInput">Upload transfer slip </label>
   </div>
           
           <input type="file" id="fileField" name="fileToUpload" value="fileToUpload" placeholder="">

@@ -54,7 +54,7 @@ $username = $_SESSION["username"];
 </ul>
 <div class="ok">
 
-  <img class="imageza" src="pic/profile.png" alt="img"></div>
+  <img class="imageza" src="pic/profile.png" alt="img">
 
         <div class="wow">MARKET ORDER</div>
 </div>
@@ -71,7 +71,7 @@ if ($result->num_rows > 0):
     while($row = $result->fetch_assoc()):
 ?>
       
-        <div class="wow"><?php echo "Order ID: " . $row["id"]. " - Order: " . $row["name"] . " ||| BY : " . $row["buyer"]. "<hr>"; ?></div>
+        <div class="wow"><?php echo "Order ID: " . $row["id"]. " |||  " . $row["name"] . " ||| BY : " . $row["buyer"]. "<hr>"; ?></div>
 <?php
 endwhile; endif;
 $conn->close();

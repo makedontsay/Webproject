@@ -1,10 +1,13 @@
-body{background: #f1f1f1;
+body{background: linear-gradient(144deg, #e0ff8b, #ffffff);
+background-size: 1000% 1000%;
+
+animation: AnimationName 30s ease infinite;
 }
 
 @keyframes AnimationName { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0%{background-position:5% 0%}
+    50%{background-position:96% 100%}
+    100%{background-position:5% 0%}
 }
 
 .imageza2{
