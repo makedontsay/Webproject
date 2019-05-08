@@ -63,7 +63,7 @@ session_start();
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h1 class="card-title" id="username"><?php echo $email ?></h1>
+        <h1 class="card-title" id="username"><?php echo $username ?></h1>
         <h5 class="card-title"><?php echo $email ?></h5>
       </div>
     </div>
