@@ -164,10 +164,13 @@ function pre_r($array){
 				$total = $total + ($product['quantity'] * floatval($product['price']));
 			endforeach;
 		?>
+			<input type="hidden" name="price" value=
+				"Price : $ <?php echo $total;?>" 
+				class="form-control" placeholder="1" required>
 			<?php
 			if($i==8):
 			?>	
-				<input type="" name="name" value=
+				<input type="hidden" name="name" value=
 				"<?php echo $dataname[0]; ?> / Quantity : <?php echo $dataquan[0];?> | <?php echo $dataname[1]; ?> / Quantity : <?php echo $dataquan[1]; ?> | <?php echo $dataname[2]; ?> / Quantity : <?php echo $dataquan[2]; ?> <?php echo $dataname[3]; ?> | / Quantity : <?php echo $dataquan[3]; ?> | <?php echo $dataname[4]; ?> / Quantity : <?php echo $dataquan[4]; ?> | <?php echo $dataname[5]; ?> / Quantity : <?php echo $dataquan[5]; ?> | <?php echo $dataname[6]; ?> / Quantity : <?php echo $dataquan[6]; ?> | <?php echo $dataname[7]; ?> / Quantity : <?php echo $dataquan[7]; ?>" 
 				class="form-control" placeholder="1" required>
 				<?php $j = $j + 1 ?>
@@ -178,7 +181,7 @@ function pre_r($array){
 			<?php
 			if($i==7):
 			?>	
-				<input type="" name="name" value=
+				<input type="hidden" name="name" value=
 				"<?php echo $dataname[0]; ?> / Quantity : <?php echo $dataquan[0];?> | <?php echo $dataname[1]; ?> / Quantity : <?php echo $dataquan[1]; ?> | <?php echo $dataname[2]; ?> / Quantity : <?php echo $dataquan[2]; ?> | <?php echo $dataname[3]; ?> / Quantity : <?php echo $dataquan[3]; ?> | <?php echo $dataname[4]; ?> / Quantity : <?php echo $dataquan[4]; ?> | <?php echo $dataname[5]; ?> / Quantity : <?php echo $dataquan[5]; ?> | <?php echo $dataname[6]; ?> / Quantity : <?php echo $dataquan[6]; ?>" 
 				class="form-control" placeholder="1" required>
 				<?php $j = $j + 1 ?>
@@ -189,7 +192,7 @@ function pre_r($array){
 			<?php
 			if($i==6):
 			?>	
-				<input type="" name="name" value=
+				<input type="hidden" name="name" value=
 				"<?php echo $dataname[0]; ?> / Quantity : <?php echo $dataquan[0];?> | <?php echo $dataname[1]; ?> / Quantity : <?php echo $dataquan[1]; ?> | <?php echo $dataname[2]; ?> / Quantity : <?php echo $dataquan[2]; ?> | <?php echo $dataname[3]; ?> / Quantity : <?php echo $dataquan[3]; ?> | <?php echo $dataname[4]; ?> / Quantity : <?php echo $dataquan[4]; ?> | <?php echo $dataname[5]; ?> / Quantity : <?php echo $dataquan[5]; ?>" 
 				class="form-control" placeholder="1" required>
 				<?php $j = $j + 1 ?>
@@ -200,7 +203,7 @@ function pre_r($array){
 			<?php
 			if($i==5):
 			?>	
-				<input type="" name="name" value=
+				<input type="hidden" name="name" value=
 				"<?php echo $dataname[0]; ?> / Quantity : <?php echo $dataquan[0];?>  | <?php echo $dataname[1]; ?> / Quantity : <?php echo $dataquan[1]; ?>  | <?php echo $dataname[2]; ?> / Quantity : <?php echo $dataquan[2]; ?>  | <?php echo $dataname[3]; ?> / Quantity : <?php echo $dataquan[3]; ?>  | <?php echo $dataname[4]; ?> / Quantity : <?php echo $dataquan[4]; ?>" 
 				class="form-control" placeholder="1" required>
 				<?php $j = $j + 1 ?>
@@ -211,7 +214,7 @@ function pre_r($array){
 			<?php
 			if($i==4):
 			?>	
-				<input type="" name="name" value=
+				<input type="hidden" name="name" value=
 				"<?php echo $dataname[0]; ?> / Quantity : <?php echo $dataquan[0];?> | <?php echo $dataname[1]; ?> / Quantity : <?php echo $dataquan[1]; ?> | <?php echo $dataname[2]; ?> / Quantity : <?php echo $dataquan[2]; ?> | <?php echo $dataname[3]; ?> / Quantity : <?php echo $dataquan[3]; ?>" 
 				class="form-control" placeholder="1" required>
 
@@ -222,7 +225,7 @@ function pre_r($array){
 			<?php
 			if($i==3):
 			?>	
-				<input type="" name="name" value=
+				<input type="hidden" name="name" value=
 				"<?php echo $dataname[0]; ?> / Quantity : <?php echo $dataquan[0];?> | <?php echo $dataname[1]; ?> / Quantity : <?php echo $dataquan[1]; ?> | <?php echo $dataname[2]; ?> / Quantity : <?php echo $dataquan[2]; ?>" 
 				class="form-control" placeholder="1" required>
 
@@ -233,7 +236,7 @@ function pre_r($array){
 			<?php
 			if($i==2):
 			?>	
-				<input type="" name="name" value=
+				<input type="hidden" name="name" value=
 				"<?php echo $dataname[0]; ?> / Quantity : <?php echo $dataquan[0];?> | <?php echo $dataname[1]; ?> / Quantity : <?php echo $dataquan[1]; ?> " 
 				class="form-control" placeholder="1" required>
 
@@ -244,7 +247,7 @@ function pre_r($array){
 			<?php
 			if($i==1):
 			?>	
-				<input type="" name="name" value=
+				<input type="hidden" name="name" value=
 				"<?php echo $dataname[0]; ?> / Quantity : <?php echo $dataquan[0];?>" 
 				class="form-control" placeholder="1" required>
 

@@ -37,7 +37,7 @@ session_start();
   <li><img src="pic\logo.png" width="50" height="50" alt="profilepic"></li>
   <li class="topic1"><a>Transfer</a></li>
 </ul>
-
+<img class="headerimg" src="pic\bank.png">
 <div class="login-form">
     <form action="/examples/actions/confirmation.php" method="post">       
 <div class="custom-file">

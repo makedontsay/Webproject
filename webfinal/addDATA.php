@@ -23,10 +23,10 @@ echo "Connected successfully<br>";
 //sql table
 $sql = "CREATE TABLE $tablename(
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-name VARCHAR(500) NULL
+name VARCHAR(500) NULL,
+price VARCHAR(60) NOT NULL
 )";
 
-print_r($_SESSION['shopping_cart']);
 if($conn->query($sql) === TRUE){
 	echo "Table $tablename created successfully";
 } else {
@@ -34,9 +34,10 @@ if($conn->query($sql) === TRUE){
 }
 
 $name = $_GET["name"];
+$price = $_GET["price"];
 
-$sql = "INSERT INTO $tablename (name)
-VALUES ('$name')";
+$sql = "INSERT INTO $tablename (name,price)
+VALUES ('$name','$price')";
 
 if($conn->query($sql) === TRUE){
 	echo "New record created successfully";
