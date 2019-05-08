@@ -46,14 +46,14 @@ session_start();
   <li><a href="js/logout.php"> Logout</a></li>
   <li><a>Welcome , <?php echo $username ?></a></li>
   <li><img src= <?php echo "pic/".$imgfile ?> width="50" height="50" alt="propic"></li>
-  <li class="topic1"><a>Rate us</a></li>
+  <li class="topic1"><a>Personal Trades</a></li>
 </ul>
 
 	<div class="container">
             <div class="row">
                 <div class="col-md-8">
                   <div class="page-header">
-                    <h1>Personal Trade</h1>
+                    <h1>Trade Contact information</h1>
                   </div> 
                    <div class="comments-list">
                        <div class="card mb-3" style="max-width: 540px;">
@@ -64,7 +64,7 @@ session_start();
     <div class="col-md-8">
       <div class="card-body">
         <h1 class="card-title" id="username"><?php echo $username ?></h1>
-        <h5 class="card-title"><?php echo $email ?></h5>
+        <h5 class="card-title" id="email"><?php echo $email ?></h5>
       </div>
     </div>
   </div>

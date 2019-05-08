@@ -5,7 +5,7 @@ var jdata;
 function pageLoad(){
 	document.getElementById('postbutton').onclick = getData;
 	//document.getElementById('displayPic').onclick = fileUpload;
-	var username = document.getElementById("username").innerHTML;
+	var username = document.getElementById("email").innerHTML;
 	readJson();
 }
 
@@ -30,7 +30,7 @@ function readJson(){
 
 function writeJson(msg){
 	//add data 
-	var username = document.getElementById("username").innerHTML;
+	var username = document.getElementById("email").innerHTML;
 	var temp = {};
 	temp["user"] = username;
 	temp["message"] = msg;
@@ -39,7 +39,7 @@ function writeJson(msg){
 	console.log(jdata);
 	var xhr = new XMLHttpRequest(); 
 	var jstring = JSON.stringify(jdata)
-	xhr.open("GET", "js/writeJson.php?data="+jstring); 
+	xhr.open("GET", "js/tradeJson.php?data="+jstring); 
 	xhr.onload = function() { 
 		console.log(this.responseText);
 		showPost(jdata);
