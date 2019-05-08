@@ -36,12 +36,8 @@ session_start();
 	<title>Transfer</title>
 </head>
 <body>
-	<div class="sidenav test">
-	<img class="center-block" src="pic\logo.png" width="200" height="200" alt="logoimg">
-  <a href="cart.php">Home</a>
-  <a href="information.php">Profile</a>
-  <a href="mainpage.php">Orders</a>
-  <a href="comment.php">Rate us</a>
+
+
 </div>
 
 <ul>
@@ -58,7 +54,8 @@ session_start();
     <input type="checkbox" class="custom-control-input" id="customControlInline">
   </div>
   <div class="form-group">
-    <img class="imageza" src="pic/profile.png" alt="img" height="350px;">
+    <img class="imageza" src="pic/profile.png" alt="img" height="350;">
+    <img class="imageza" src="pic/bank.png" alt="img" height="270px;">
     <label class="my-1 mr-2" for="formGroupExampleInput">Order Number: </label>
     <div class="d"><a><?php echo $orderid ?><a><br></div>
     <label class="my-1 mr-2" for="formGroupExampleInput">Order Detail: </label><br>
