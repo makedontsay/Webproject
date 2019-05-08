@@ -1,13 +1,18 @@
-body{background: linear-gradient(270deg, #b4cd42, #b5da88);
-background-size: 400% 400%;
+body{background: linear-gradient(144deg, #e0ff8b, #ffffff);
+background-size: 1000% 1000%;
 
-animation: AnimationName 46s ease infinite;
+animation: AnimationName 30s ease infinite;
 }
 
 @keyframes AnimationName { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0%{background-position:5% 0%}
+    50%{background-position:96% 100%}
+    100%{background-position:5% 0%}
+}
+
+.d{
+     font-size: 25px;
+     color: #ffffff;
 }
 
 .sidenav {
@@ -71,7 +76,7 @@ li a {
 }
 
 .login-form {
-      width: 340px;
+      width: 400px;
       margin: 50px auto;
   }
     .login-form form {
@@ -84,6 +89,7 @@ li a {
     .my-1.mr-2{
       font-size: 20pt;
       color: #ccffcc;
+
     }
 
     .form-control, .btn {
